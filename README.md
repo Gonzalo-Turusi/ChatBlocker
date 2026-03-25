@@ -1,84 +1,89 @@
 # ChatBlocker
 
-Una aplicación de overlay simple para cubrir manualmente áreas de chat en juegos y aplicaciones.
+A simple overlay application for manually covering chat areas in games and applications.
 
-## ¿Qué hace?
+## What It Does
 
-ChatBlocker es una ventana transparente que puedes posicionar sobre cualquier área de chat para bloquearla visualmente. No detecta nada automáticamente - es una herramienta manual de cobertura.
+ChatBlocker is a transparent window that you can position over any chat area to manually block it visually. It does not perform any automatic detection - it's a manual coverage tool.
 
-## Características
+## Features
 
-- **Overlay Manual**: Ventana que cubre el área que tú decidas
-- **Transparente al Mouse**: Puedes hacer clic a través del overlay
-- **Siempre Visible**: Se mantiene sobre todas las ventanas y juegos
-- **Personalizable**: Color, tamaño, posición y opacidad ajustables
-- **Hotkeys Configurables**: Asigna cualquier tecla con modificadores
+- **Manual Overlay**: Window that covers the area you decide
+- **Click-Through**: Transparent overlay that doesn't interfere with mouse input
+- **Always on Top**: Works over fullscreen games and applications
+- **Customizable**: Color, size, position, and opacity adjustable
+- **Configurable Hotkeys**: Assign any key combination with modifiers
 
-## Controles
+## Controls
 
-### Teclas por Defecto
-- **F7**: Abrir configuración
-- **F8**: Modo edición (mover/redimensionar)
-- **F9**: Mostrar/ocultar overlay
-- **F10**: Salir de la aplicación
+### Default Hotkeys
+- **F7**: Open configuration window
+- **F8**: Toggle edit mode (move/resize overlay)
+- **F9**: Toggle overlay visibility on/off
+- **F10**: Exit application
 
-### Modo Edición (F8)
-- Arrastra el overlay para posicionarlo
-- Arrastra las esquinas para redimensionar
-- Borde rojo visible cuando estás en modo edición
-- Información de posición y tamaño en pantalla
+### Edit Mode (F8)
+- Drag the overlay to position it over chat
+- Drag corners to resize the overlay
+- Red border visible when in edit mode
+- Position and size information displayed on screen
 
-## Uso Básico
+## Basic Usage
 
-1. **Ejecutar**: `ChatBlocker.exe`
-2. **Posicionar**: Presiona F8 → arrastra sobre el chat
-3. **Ajustar**: Presiona F7 para configurar color, opacidad, teclas
-4. **Usar**: Presiona F9 para mostrar/ocultar el overlay
+1. **Run**: `ChatBlocker.exe`
+2. **Position**: Press F8 → drag over chat area
+3. **Configure**: Press F7 → set color, opacity, hotkeys
+4. **Use**: Press F9 to show/hide overlay
 
-## Configuración (F7)
+## Configuration (F7)
 
-### Asignación de Teclas
-1. Haz clic en cualquier campo de tecla
-2. Presiona la tecla que quieres usar
-3. Soporta Ctrl, Alt, Shift como modificadores
-4. Las teclas se guardan automáticamente
+### Hotkey Assignment
+1. Click on any hotkey field
+2. Press your desired key combination
+3. Supports Ctrl, Alt, Shift modifiers
+4. Settings are saved automatically
 
-### Personalización Visual
-- **Color**: Click en "Choose Color" → selecciona cualquier color RGB
-- **Opacidad**: Slider 0-100% para ajustar transparencia
-- **Reset**: Botón para restaurar valores por defecto
+### Visual Customization
+- **Color**: Click "Choose Color" → select any RGB color
+- **Opacity**: Slider 0-100% for transparency control
+- **Reset**: Button to restore default settings
 
-## Tecnologías Usadas
+## Technologies Used
 
-- **Lenguaje**: C# con .NET 10.0
-- **Interfaz**: Windows Forms (Win32)
-- **Gráficos**: System.Drawing para renderizado
-- **Configuración**: JSON para guardar preferencias
-- **Hotkeys**: API de Windows para registro global
+- **Language**: C# with .NET 10.0
+- **Interface**: Windows Forms (Win32 API)
+- **Graphics**: System.Drawing for rendering
+- **Configuration**: JSON for settings persistence
+- **Hotkeys**: Windows API for global registration
 
-## Cómo Compilar y Ejecutar
+## Build and Run
 
-### Desde Código Fuente
-1. Clona o descarga este repositorio
-2. Abre terminal en la carpeta del proyecto
-3. Ejecuta:
-   ```bash
-   dotnet build
-   ```
-4. Ejecuta:
-   ```bash
-   dotnet run
-   ```
+### From Source
+1. Clone or download this repository
+2. Open terminal in project directory
+3. Run build command:
 
-### Para Generar Ejecutable
-1. Asegúrate de tener .NET 10.0 SDK
-2. Ejecuta:
-   ```bash
-   dotnet publish -c Release -r win-x64 --self-contained true -p:PublishSingleFile=true
-   ```
-3. El ejecutable se genera en: `bin\Release\net10.0-windows\win-x64\publish\ChatBlocker.exe`
+```bash
+dotnet build
+```
 
-## Configuración por Defecto
+4. Run application:
+
+```bash
+dotnet run
+```
+
+### Generate Executable
+1. Ensure .NET 10.0 SDK is installed
+2. Run publish command:
+
+```bash
+dotnet publish -c Release -r win-x64 --self-contained true -p:PublishSingleFile=true
+```
+
+3. Executable generated at: `bin\Release\net10.0-windows\win-x64\publish\ChatBlocker.exe`
+
+## Default Configuration
 
 ```json
 {
@@ -94,25 +99,25 @@ ChatBlocker es una ventana transparente que puedes posicionar sobre cualquier á
 }
 ```
 
-## Problemas Comunes
+## Troubleshooting
 
-**El overlay no se ve**:
-- Presiona F8 para entrar en modo edición
-- Verifica que el toggle esté activado (presiona tu tecla F9)
+**Overlay not visible**:
+- Press F8 to enter edit mode
+- Check if overlay is disabled (press your Toggle hotkey)
 
-**Las teclas no funcionan**:
-- Presiona F7 para verificar la asignación
-- Asegúrate de hacer clic en "Save & Close"
+**Hotkeys not working**:
+- Press F7 to verify hotkey assignments
+- Ensure settings are saved (click Save & Close)
 
-**Problemas de rendimiento**:
-- Reduce el tamaño del overlay
-- Usa color negro (requiere menos renderizado)
-- Cierra otras aplicaciones si es necesario
+**Performance issues**:
+- Reduce overlay size to cover only chat area
+- Use simpler colors (black requires less rendering)
+- Close other applications if needed
 
-## Licencia
+## License
 
-Este proyecto se proporciona tal cual está para uso educativo y personal.
+This project is provided as-is for educational and personal use.
 
 ---
 
-**ChatBlocker** - Simple, directo y funcional.
+**ChatBlocker** - Simple, direct, and functional.
